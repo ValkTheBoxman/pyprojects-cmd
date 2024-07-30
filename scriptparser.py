@@ -41,10 +41,10 @@ class RemoteScriptBuilder:
             raise Exception(f"Couldn't find {name} on this device..")
             
             
-    def add_command_to_main_file(self, command_name, script_name, function_name):
+    def add_command_to_main_file(self, command_name, script_name, function_name, *args):
         with open(".\\boxpyshell.py", "r") as file:
             _contents = file.read()
-        new_contents = f"import {script_name}\n{_contents}\nelif command == '{command_name}':\n    {function_name}({*args}, {**kwargs})"
+        new_contents = f"import {script_name}\n{_contents}\nelif command == '{command_name}':\n    )"
         with open(".\\boxpyshell.py", "w") as file:
             file.write(new_contents)
         

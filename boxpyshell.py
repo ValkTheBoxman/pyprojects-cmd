@@ -39,6 +39,10 @@ except Exception as Err:
 
 logins.doLogin() # Make a login. Is bypassed if skipLogin is true.
 
+def test():
+    print("tests every command, continue?")
+    choice = input()
+
 while run is True: # Main Loop
     
     if printStuff is True:
